@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <link rel="stylesheet" href="styles/style.css">
+    
+    <head>
+        <title>Attività Progettuale</title>
+    </head>
+    
+    <body>
+        <div id="top">
+            <h1>HELP GUIDE</h1>
+        </div>  
+
+        
+        <div class="body"> 
+            <!-- INTRODUCTION -->
+            <h2>Introduzione</h2>
+            <div class="remark">
+                Il seguente documento si pone come guida utente per l'utilizzo dell'applicazione 
+                <a href="https://www.dm.unibo.it/~casciola/view-3dweb-app/#"><b>View 3D Web App</b></a>.
+                <p>
+                    L'applicazione consente la <i>visualizzazione</i> e l'<i>interazione</i> con modelli in formato:    
+                    <ul>
+                        <li><ks>.igs</ks> (IGES)</li>
+                        <li><ks>.db</ks>, <ks>.dbe</ks> (XCModel)</li>
+                    </ul>
+                </p>
+                
+            </div>
+            <br>
+
+            <img class="centered" src="images/app.png" alt="View">
+            <p class="tagline">
+                Nell'esempio, viene visualizzato il modello 
+                <a href="https://www.dm.unibo.it/~casciola/php/public_html/DataBase/viewDataBase.php?nslides=-2&path=Animal&name=Head-Crocodile">
+                    Head-Crocodile
+                </a>
+            </p>
+
+            <!-- INTRODUCTION -->
+            <h2>Interfaccia grafica</h2>
+            <div class="remark">
+                <p>
+                    L'interfaccia grafica offre numerose possibilità di interazione da parte dell'utente. Comprende:
+                    <ol>
+                        <li> <a href="#menu-bar">Barra dei menù</a></li>
+                        <li> <a href="#tools-bar">Barra degli strumenti</a></li>
+                        <li> <a href="#canvas">Canvas</a></li>
+                        <li> <a href="#surfaces-list">Lista delle superfici</a></li>
+                    </ol>
+                </p>
+            </div>
+              
+            <div class="remark">
+                <!-- menu bar -->
+                <p>
+                    <h3 id="menu-bar">Barra dei menù</h3>
+                    <p>
+                        Componente fisso dell'interfaccia, occupa la parte superiore sinistra della finestra. 
+                        Offre due menù, <em>File</em> e <em>Help</em>: 
+                    </p>
+                    <img class="small_image" src="images/menu.png" alt="menu bar">
+                    <p>
+                        <h4>File</h4>
+                        <p>
+                            Consente l'apertura di una finestra modale per il caricamento di modelli da visualizzare, scegliendo
+                            tra
+                            <ul>
+                                <li><highlight><b>sei</b> modelli di default</highlight> dell'applicazione</li>
+                                <li>o caricando personalmente un file in formato <highlight>IGES</highlight> o 
+                                    <highlight>XCModel</highlight></li>
+                            </ul>
+                            <p>
+                                Le estensioni supportate sono esclusivamente: 
+                                <ul>
+                                    <li><ks>.igs</ks> (IGES),</li>
+                                    <li><ks>.db</ks>, <ks>.dbe</ks> (XCModel).</li>
+                                </ul> 
+                                È possibile il caricamento di più file <ks>.db</ks> e <ks>.dbe</ks> alla volta ma, ad ogni nuovo 
+                                caricamento, viene fatto un refresh della finestra, visualizzando solo l'ultima selezione e sovrascrivendo
+                                quella precedente.
+                            </p>
+                        </p>
+                    </p>
+
+                    <p>
+                        <h4>Help</h4>
+                        <p>
+                            Il menù di <b>Help</b> apre una finestra a schermo che elenca i tasti rapidi da tastiera
+                            per eseguire le funzioni.
+                        </p>
+                        <img class="center" src="images/help menu.png" alt="help">
+                    </p>
+                </p>
+            </div>
+
+            <div class="remark">
+                <!-- tools bar -->
+                <p>
+                    <h3 id="tools-bar">Barra degli strumenti</h3>
+                    <p>
+                        La barra degli strumenti occupa la parte sinistra della finestra.
+                        Può essere visualizzata o nascosta:
+                        <ul>
+                            <li>se si sta visualizzando un modello 3D nella scena, anche usando il tasto <ks>T</ks> da tastiera</li>
+                            <li>selezionando l'icona formata da tree linee orizzontali 
+                                <img class="inline" src="images/tools icon.png" alt="tools icon"></li>                            
+                        </ul>
+                        Cambiando la modalità di visualizzazione dei <i>Tools</i>, il <ks>canvas</ks> si ridimensiona dinamicamente 
+                        adattandosi allo schermo
+                    </p>
+                    <p>
+                        I sei strumenti sono attivabili sia da tastiera che da click del mouse.
+                        <ul>
+                            <li>
+                                <highlight><ks>Debug</ks>:</highlight> consente di visualizzare informazioni sulla scena:
+                                <ul>
+                                    <li><code>Camera</code>: la posizione della camera. 
+                                        Può essere fissata disattivando <i><k>Fixed camera</k></i>, come indicato dalle notazioni a schermo
+                                        <code>Camera: free</code> e <code>Camera: bound</code>
+                                    </li>
+                                    <li><code>Light source</code>: la posizione della sorgente luminosa. 
+                                        <ul>
+                                            <li>
+                                                Se <i><k>Lock light source</k></i> è attivato, la fonte luminosa è in una posizione fissa e 
+                                                indipendente da quella della camera,
+                                            </li>
+                                            <li>
+                                                se <i><k>Lock light source</k></i> non è attivato ma la camera è fissa, la luce rimane comunque 
+                                                nella stessa posizione
+                                            </li>
+                                            <li>
+                                                solo nel caso in cui sia la camera che la luce siano libere, le loro posizioni e direzioni coincidono
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><code>Looking at</code>: indica il punto di vista della camera. Quando la camera è libera 
+                                        (<code>Camera: free</code>) è fisso in <code>0.00 / 0.00 / 0.00</code>, mentre varia quando la camera è bloccata
+                                    </li>
+                                    <li><code>Field of view</code>: rappresenta l'ampiezza dell'angolo di visione della scena</li>
+                                    <li>
+                                        <code>Direction</code>: indica la direzione della camera. Al caricamento di un nuovo file, la camera mantiene 
+                                        la direzione precedente
+                                    </li>
+                                    <li><code>Render mode</code>: <code>solid</code> o <code>wireframe</code>. Può essere modificato 
+                                        dall'apposito comando</li>
+                                    <li><code>Shader</code>: riporta l'informazione sullo shader utilizzato. Nel caso sia applicata una texture sul modello,
+                                    viene indicata nel campo <code>texture</code></li>
+                                    <li><code>fps</code>: misura le prestazioni dell'applicazione</li>
+                                    <li><code>Model</code>: il nome del modello (visualizzato solo per i file IGES o i modelli di default)</li>
+                                    <li><code>Surfaces</code>: indica il numero di superfici e quante sono visualizzate sul totale</li>
+                                    <li><code>BBox</code> e <code>BBox Center</code>: indicano le coordinate e il centro della <i>bounding box</i>
+                                    del modello, visualizzabili selezionando <code>Render mode: wireframe</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <highlight><ks>Lock light source</ks>:</highlight> alla selezione del comando, la sorgente luminosa viene 
+                                <b>fissata</b> in una posizione specifica rispetto alla scena. Muovendo la camera, gli effetti luminosi sugli oggetti 
+                                cambiano in base alla loro posizione e orientamento rispetto alla sorgente luminosa fissa. 
+                                La direzione e l'intensità della luce rimangono costanti.
+                            </li>
+                            <li>
+                                <highlight><ks>Hue shift</ks>:</highlight> modifica la <b>tonalità</b> del colore senza influenzare 
+                                    la luminosità o la saturazione. L'effetto non è visibile se sul modello viene applicata una 
+                                    texture.
+                            </li>
+                            <li>
+                                <highlight><ks>Fixed camera</ks>:</highlight> fissando la camera in una posizione e angolazione, 
+                                cambiando la direzione di vista (<code>LookingAt</code>) si avrà un cambiamento nella prospettiva della 
+                                scena. È possibile spostare il focus su diverse aree della scena, mantenendo sempre la stessa posizione 
+                                della fotocamera.
+                            </li>
+                            <li>
+                                <highlight><ks>Touch selection</ks>:</highlight> se attivato, permette la selezione attraverso il touch del canvas 
+                                e blocca i comandi per la rotazione e lo zoom del canvas (attraverso il touch stesso), così da non avere problemi 
+                                di selezioni involontarie nello spostare il modello attraverso i comandi touch.
+                                
+                            </li>
+                        </ul>
+                    </p> 
+                    <p>
+                        L'applicazione offre anche la possibilità di visualizzare il modello con
+                        <ul>
+                            <li><ks>cinque shader</ks>: diffue, phong_per_vertex, phong _per_fragment, 
+                            blinn_phong e toon</li>
+                            <li><ks>quattro texture</ks>: bricks, wood, metal e uv</li>
+                        </ul>                       
+                    </p>
+                    <p>
+                        Ulteriori parametri con cui si può interagire sono:
+                        <ul>
+                            <li>
+                                il <ks>livello di dettaglio</ks> del modello, in un range da <b>1</b> a <b>16</b>
+                            </li>
+                            <li> 
+                                il <ks>field of view</ks>, per modificare l'angolo di visione della scena da un minimo di 
+                                <b>45</b> gradi ad un massimo di <b>120</b>
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        Infine, sono disponibili due diverse modalità di <highlight><ks>RENDERING</ks></highlight> e 
+                        <highlight><ks>COLORING</ks></highlight>. Per quanto riguarda il rendering:
+                        <ul>
+                            <li><bc>SOLID</bc>, per la visualizzazione delle superfici</li>
+                            <li><bc>WIREFRAME</bc>, che mostra anche la <i>bounding box</i> del modello</li>
+                        </ul>
+                        Mentre le due modalità di coloring sono:
+                        <ul>
+                            <br>
+                            <li><bc>MODEL</bc>, in cui tutte le superfici hanno un unico colore</li>
+                            <li><bc>SURFACES</bc>, ogni superfice ha un colore diverso</li>
+                        </ul>
+                    </p>
+                </p>
+            </div>
+
+            <div class="remark">
+                <!-- canvas -->
+                <p>
+                    <h3 id="canvas">Canvas</h3>
+                </p>
+
+                <!-- surfaces-list -->
+                <p>
+                    <h3 id="surfaces-list">Lista delle superfici</h3>
+                </p>
+                
+            </div>
+            <br>
+        
+        </div>
+    </body>
+</html>
+                
