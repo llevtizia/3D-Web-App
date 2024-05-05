@@ -84,7 +84,7 @@
                     </p>
 
                     <p>
-                        <h4>Help</h4>
+                        <h4 id="help-menu">Help</h4>
                         <p>
                             Il menù di <b>Help</b> apre una finestra a schermo che elenca i tasti rapidi da tastiera
                             per eseguire le funzioni.
@@ -110,7 +110,7 @@
                         adattandosi allo schermo
                     </p>
                     <p>
-                        I sei strumenti sono attivabili sia da tastiera che da click del mouse.
+                        I cinque strumenti sono attivabili sia da tastiera che da click del mouse.
                         <ul>
                             <li>
                                 <highlight><ks>Debug</ks>:</highlight> consente di visualizzare informazioni sulla scena:
@@ -194,7 +194,7 @@
                             </li>
                             <li> 
                                 il <ks>field of view</ks>, per modificare l'angolo di visione della scena da un minimo di 
-                                <b>45</b> gradi ad un massimo di <b>120</b>
+                                <b>30</b> gradi ad un massimo di <b>120</b>
                             </li>
                         </ul>
                     </p>
@@ -219,11 +219,60 @@
                 <!-- canvas -->
                 <p>
                     <h3 id="canvas">Canvas</h3>
+                    <p>
+                        Il canvas 3D consente la visualizzazione dellla scena e occupa l'intera finestra, 
+                        ridimensionandosi <b>dinamicamente</b> in base alle dimensioni dello schermo. 
+                        Può essere navigato
+                        <ul>
+                            <li>
+                                da <ks>tastiera</ks> (con i tasti rapidi riportati nel menù 
+                                <a href="#help-menu"><i>Help</i></a>)
+                            </li>
+                            <li>
+                                utilizzando il <ks>mouse</ks>: la rotella del mouse consente di avvicinare o allontanare la camera 
+                                (ingrandendo o rimpicciolendo la scena) e, tenendola premuta, è possibile cambiare il punto di 
+                                vista muovendo il mouse
+                            </li>
+                            <li>
+                                utlizzando dispositivi <ks>touch</ks>
+                            </li>
+                        </ul>
+                    </p>
                 </p>
+            </div>
 
+            <div class="remark">
                 <!-- surfaces-list -->
                 <p>
                     <h3 id="surfaces-list">Lista delle superfici</h3>
+                    <p>
+                        La lista delle superfici che costituiscono la scena occupa la parte destra della finestra. Come per 
+                        la barra degli strumenti, anche questa può essere visualizzata o nascosta:
+                        <ul>
+                            <li>se si sta visualizzando un modello 3D nella scena, anche usando il tasto <ks>E</ks> da tastiera</li>
+                            <li>selezionando l'icona formata da tree linee orizzontali 
+                                <img class="inline" src="images/tools icon.png" alt="tools icon"></li>                            
+                        </ul>
+                        Cambiando la modalità di visualizzazione delle <i>Surfaces</i>, il <ks>canvas</ks> si ridimensiona dinamicamente 
+                        adattandosi allo schermo.
+                    </p>
+                    <p>
+                        Ogni superficie della lista può essere nascosta dalla visualizzazione tramite l'icona 
+                        <img class="inline" src="images/surfaces view icon.png" alt="tools icon"></li>, che consente di mostrare o 
+                        nascondere la superficie. Inoltre, sono presenti due pulsanti:
+                        <ul>
+                            <li>
+                                <ks><highlight>Show others</highlight></ks>: nasconde la superficie selezionata, mentre le altre rimangono 
+                                visibili
+                            </li>
+                            <li>
+                                <ks><highlight>Hide others</highlight></ks>: consente di visualizzare solo la superficie selezionata, 
+                                nascondendo le altre
+                            </li>
+                        </ul>
+                        In aggiunta, <ks><i>Show all</i></ks> e <ks><i>Hide all</i></ks> agiscono allo stesso modo, ma su tutta la 
+                        lista.
+                    </p>
                 </p>
                 
             </div>
