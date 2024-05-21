@@ -19,14 +19,6 @@ a:hover {
     background-color: #cccccc;
 }
 
-
-hr {
-    clear: both;
-    height: 1px;
-    color: #242424;
-    background-color: transparent;
-}
-
 h1, h2, h3 {
     color: #242424;
     clear: left;
@@ -79,7 +71,10 @@ ks {
 }
 
 kc {
-    color: #41b3a3	;
+    color: #0067cd	;
+    font-family: "Arial";
+	font-weight: bold;
+	font-size: 90%;
 }
 
 
@@ -112,6 +107,7 @@ h1 {
     font-size: 150%;
     text-align: center;
     background-color: #FF99C8 ;
+    font-weight: bold;
 	padding: 10px;
 }
 
@@ -276,13 +272,6 @@ kw {
     height: auto; /* Maintain aspect ratio */
 }
 
-.container_columns {
-    display: flex;
-}
-
-.column {
-    flex: 1;
-}
 
 .fixed-column {
     width: 300px; /* Fixed width for the left column */
@@ -291,4 +280,65 @@ kw {
 
 highlight {
     background-color: #FDFD96; /* Set the background color to yellow */
+}
+
+
+
+.container-columns {
+    display: flex;
+    align-items: center; /* Aligns items vertically center */
+    gap: 20px; /* Adjust the gap between columns if needed */
+}
+
+.column {
+    flex: 1; /* Default flex for equal columns */
+    padding: 10px; /* Adds space inside each column */
+}
+
+.image-column {
+    flex: 0 0 30%; /* Adjust the flex-basis value to make this column 30% of the container */
+}
+
+.text-column {
+    flex: 1; /* The text column takes up the remaining space */
+    
+}
+
+.image-column img {
+    max-width: 100%; /* Ensures the image fits within its column */
+    height: auto; /* Maintains the aspect ratio of the image */
+}
+
+.text-column p {
+    margin: 0;
+    padding: 10px;
+    
+}
+
+
+
+.four-column-list {
+    column-count: 4;
+    column-gap: 10px; /* Adjust the gap between columns if needed */
+    list-style-type: disc; /* Ensures the list-style is disc */
+    padding-left: 20px; /* Ensures proper indentation of the list items */
+}
+
+.four-column-list li {
+    break-inside: avoid; /* Prevents items from breaking between columns */
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.gallery-item {
+    width: 48%;
+    margin-bottom: 20px;
+}
+.gallery-item img {
+    width: 100%;
+    height: auto;
 }
