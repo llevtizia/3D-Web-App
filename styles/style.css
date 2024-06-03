@@ -130,7 +130,7 @@ h4 {
 }
 
 h5 {
-    background-color: #d5ffb0;
+    background-color: #ffdfb0;
     font-size: 100%;
 
 }
@@ -192,12 +192,13 @@ img.inline {
     vertical-align: middle; /* Aligns the image vertically with the text */
 }
 
-img.centered {
+.image-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+}
+
+img.centered {
     max-width: 100%;
     max-height: 100%;
     border-radius: 10px;
@@ -268,7 +269,7 @@ kw {
     margin-left: auto;
     margin-right: auto;
     */
-    width: 150px; /* Set the desired width */
+    width: 200px; /* Set the desired width */
     height: auto; /* Maintain aspect ratio */
 }
 

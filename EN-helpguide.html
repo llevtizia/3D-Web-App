@@ -1,0 +1,584 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+
+        <title>Project Activity</title>
+    </head>
+    
+    <body>
+        <header id="top">
+            <h1>xcmodel 3D-WEB-App v2.0</h1>
+        </header>  
+
+        
+        <div class="body"> 
+            <!-- INTRODUCTION -->
+            <h2>Introduction</h2>
+            <div class="remark">
+                The following document serves as a user guide for the use of the application 
+                <a href="https://www.dm.unibo.it/~casciola/view-3dweb-app/#"><b>xcmodel 3D-WEB-App v2.0</b></a>.
+                <p>
+                    The application allows you to <i>examine</i> models created with the <b>XCModel</b> software; 
+                    some models are freely downloadable from the project page 
+                    <a href="https://www.dm.unibo.it/~casciola/html/xcmodel.html">XCModel</a>.
+                </p>
+                
+            </div>
+            <br>
+            
+            <div class="image-container">
+                <a href="images/app.png" data-lightbox="mygallery">
+                    <img class="centered" src="images/app.png" alt="Mrpotato model">
+                </a>
+            </div>
+            
+            
+            <p class="tagline">
+                In the example, the model displayed is
+                <a href="https://www.dm.unibo.it/~casciola/php/public_html/DataBase/viewDataBase.php?nslides=-2&path=Character&name=Mrpotato">
+                    Mrpotato</a>, downloadable in both <b>IGES</b> and <b>XCModel OBJ</b> formats.
+            </p>
+
+            <br><br><br>
+            
+
+            <!-- INTRODUCTION -->
+            <h2>Graphical Interface</h2>
+            <div class="remark">
+                <p>
+                    The graphical interface offers numerous interaction possibilities for the user. It includes:
+                    <ol>
+                        <li> <a href="#menu-bar">Menu Bar</a></li>
+                        <li> <a href="#tools-bar">Tools Bar</a></li>
+                        <li> <a href="#canvas">Canvas</a></li>
+                        <li> <a href="#surfaces-list">Surfaces List</a></li>
+                    </ol>
+                </p>
+            </div>
+            <br>
+            <div class="remark">
+                <!-- menu bar -->
+                <p>
+                    <h3 id="menu-bar">1. Menu Bar</h3>
+                    <p>
+                        A fixed component of the interface, it occupies the upper left part of the window. 
+                        It offers three menus: <em>File</em>, <em>Help</em>, and <em>Guide</em>.
+                    </p>
+                    <a href="images/menu.png" data-lightbox="mygallery">
+                        <img class="small_image" src="images/menu.png" alt="menu bar">
+                    </a>
+                    <h4>File</h4>
+                        <div class="container-columns">
+                            <div class="column image-column">
+                                <a href="images/file-upload.png" data-lightbox="mygallery">
+                                    <img src="images/file-upload.png" alt="file-upload">
+                                </a>                                                        
+                                <p class="tagline">
+                                    Model selection.
+                                </p>
+                            </div>
+                            <div class="column image-column">
+                                <a href="images/select-file-mrpotato.png" data-lightbox="mygallery">
+                                    <img src="images/select-file-mrpotato.png" alt="fmrpotato-files">
+                                </a>
+                                <p class="tagline">
+                                    Selection of <b>.db</b>, <b>.dbe</b> files of the <b>Mrpotato</b> model
+                                </p>
+                            </div>
+                            <div class="column text-column">
+                                By clicking the button <b>File</b>, a modal window is opened for loading models to be viewed, choosing 
+                                from:
+                                <ul>
+                                    <li><highlight><b>six</b> default models</highlight> of the application</li>
+                                    <li>or personally uploading a file in <highlight>IGES</highlight> or 
+                                    <highlight>XCModel</highlight> format</li>
+                                </ul>
+                                <p>
+                                    The supported extensions are exclusively:
+                                    <ul>
+                                        <li><ks>.igs</ks> (IGES),</li>
+                                        <li><ks>.db</ks>, <ks>.dbe</ks> (XCModel).</li>
+                                    </ul>  
+
+                                    It is possible to load multiple <ks>.db</ks> and <ks>.dbe</ks> files at once, but with each 
+                                    new upload, the window is refreshed, displaying only the last selection and overwriting 
+                                    the previous one.
+                                </p>
+                            </div>
+                        </div>
+                    
+                        <!-- come scaricare un modello -->
+                        <h5>How to download a model</h5>
+                        <p>
+                            <a href="images/xcmodel-homepage.png" data-lightbox="mygallery">
+                                <img class="centered" src="images/xcmodel-homepage.png" alt="xcmodel-homepage">
+                            </a>
+                        </p>
+
+                        
+                        <div class="container-columns">
+                            <div class="column image-column">
+                                <a href="images/mrpotato.png" data-lightbox="mygallery">
+                                    <img src="images/mrpotato.png" alt="mrpotato">
+                                </a>
+                                
+                            </div>
+                            <div class="column text-column">
+                                <p>
+                                    By going to the <bc>3D NURBS Models</bc> section of <b>XCModel</b>, you have the opportunity 
+                                    to download various <ks>3D NURBS models produced with XCModel software</ks>, divided into 
+                                    different categories:
+                                    <ul class="four-column-list">
+                                        <li>Aircraft</li>
+                                        <li>Animal</li>
+                                        <li>Bathroom</li>
+                                        <li>Boat</li>
+                                        <li>Character</li>
+                                        <li>Furniture</li>
+                                        <li>Kitchen</li>
+                                        <li>Lamp</li>
+                                        <li>Music</li>
+                                        <li>Other</li>
+                                        <li>Plants</li>
+                                        <li>Vase</li>
+                                        <li>Vehicle</li>        
+                                    </ul>
+                                </p>
+                                <p>
+                                    In the example, the <b>Mrpotato</b> model is downloaded from the <i>Character</i> category. 
+                                    For each model, the following are visible:
+                                    <ul>
+                                        <li>the number of <b><i>surfaces</i></b> that make up the model (29)</li>
+                                        <li>the number of <b><i>trimmed surfaces</i></b> (4)</li>
+                                        <li>the total number of <b><i>control points</i></b> (951)</li>
+                                    </ul>
+                                </p>
+                                <p>
+                                    By selecting <highlight><ks>Download IGES</ks></highlight>, the single file <kc><i>Mrpotato.igs</i></kc> 
+                                    is downloaded, while <highlight><ks>Download XCModel OBJ</ks></highlight> allows you to download the 
+                                    compressed file <kc><i>Mrpotato.tgz</i></kc>.
+                                </p>
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="container-columns">
+                            <div class="column image-column">
+                                <a href="images/mrpotato-obj.png" data-lightbox="mygallery">
+                                    <img src="images/mrpotato-obj.png" alt="file-list"> 
+                                </a>                       
+                                <p class="tagline">
+                                    The extracted folder containing the <b>.obj</b>, <b>.db</b> and <b>.dbe</b> files
+                                </p>
+                            </div>
+                            <div class="column image-column">
+                                <a href="images/esempio-obj.png" data-lightbox="mygallery">
+                                    <img src="images/esempio-obj.png" alt="file-list">
+                                </a>
+                                <p class="tagline">
+                                    Excerpt of the <b>Mrpotato.obj</b> file
+                                </p>
+                            </div>
+                            <div class="column text-column">
+                                <p>
+                                    Inside the extracted folder, the <b>.obj</b> file is a text document that lists 
+                                    the <ks>.db</ks> and <ks>.dbe</ks> files that represent the surfaces modeling the object.
+                                    <ul>
+                                        <li>
+                                            A <highlight><ks>.db</ks></highlight> file defines a <b>NURBS</b> surface
+                                        </li>
+                                        <li>
+                                            A <highlight><ks>.dbe</ks></highlight> file defines a <b>NURBS</b> surface 
+                                            <i>trimmed</i> with the definition of a region in the parametric domain.
+                                        </li>
+                                    </ul>
+                                    A <ks>.dbe</ks> file therefore represents an extension compared to <ks>.db</ks>. Additionally,
+                                    <ul>
+                                        <br>
+                                        <li>
+                                            the <b>XCModel</b> software allows the management of generic trimmed NURBS surfaces: the region of 
+                                            the parametric domain can be defined by generic 2D NURBS curves, while
+                                        </li>
+                                        <li>
+                                            the web application is able to correctly load and display only <ks>.dbe</ks> files where the region of 
+                                            the parametric domain is defined by straight segments corresponding to the nodal partition of the 
+                                            NURBS surface. 
+
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+            
+
+                    <h4>Help</h4>
+                    <p>
+                        The <b>Help</b> menu opens a window on the screen that lists the keyboard shortcuts 
+                        for executing functions.
+                    </p>
+                    <a href="images/help menu.png" data-lightbox="mygallery">
+                        <img class="center" src="images/help menu.png" alt="help">
+                    </a>
+                    <br>
+
+                    <h4>Guide</h4>
+                    <p>
+                        The <b>Guide</b> button allows you to open this guide.
+                    </p>
+
+                </p>
+            </div>
+            <br>
+            <div class="remark">
+                <!-- tools bar -->
+                <p>
+                    <h3 id="tools-bar">2. Tools bar</h3>
+
+                    <div class="container-columns">
+                        <div class="column image-column">
+                            <a href="images/tools.png" data-lightbox="mygallery">
+                                <img src="images/tools.png" alt="tools">
+                            </a>                            
+                        </div>
+                        <div class="column text-column">
+                            <p>
+                                The tools bar occupies the left part of the window. It can be shown or hidden:
+                                <ul>
+                                    <li>by selecting the icon with three horizontal lines 
+                                        <img class="inline" src="images/tools icon.png" alt="tools icon"></li> 
+                                    <li>
+                                        using the <ks>T</ks> key on the keyboard if a 3d model 
+                                        is currently being visualized in the scene
+                                    </li>                                                               
+                                </ul>
+                                If the display mode of the <i>Tools</i> panel changes, the <ks>canvas</ks> resizes dynamically 
+                                to fit the screen.
+                            </p>
+                            <p>
+                                The five tools can be activated either by keyboard or by mouse click.
+                                <ul>
+                                    <li>
+                                        <highlight><ks>Lock light source</ks>:</highlight> when the command is selected, the light source is 
+                                        <b>fixed</b> in a specific position relative to the scene. Moving the camera, the lighting effects on the 
+                                        objects change based on their position and orientation relative to the fixed light source. 
+                                        The direction and intensity of the light remain constant.
+                                    </li>
+                                    <li>
+                                        <highlight><ks>Hue shift</ks>:</highlight> changes the <b>hue</b> of the color without affecting 
+                                        the brightness or saturation. The effect is not visible if a texture is applied to the model.
+                                    </li>
+                                    <li>
+                                        <highlight><ks>Fixed camera</ks>:</highlight> by fixing the camera in a specific position and 
+                                        angle, changing the view direction (<code>LookingAt</code>) will change the perspective of the 
+                                        scene. You can shift the focus to different areas of the scene while keeping the camera 
+                                        position constant.
+                                    </li>   
+                                    <li>
+                                        <highlight><ks>Touch selection</ks>:</highlight> if activated, it is possible to select 
+                                        surfaces directly by touching the canvas. It disables the commands for rotating and zooming the canvas (through touch), preventing 
+                                        unintended selections while moving the model using touch commands.                                        
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <p>                        
+                        <ul>
+                            <li>
+                                <highlight><ks>Debug</ks>:</highlight> shows information about the scene
+                                <p>
+                                    <ul>
+                                        <li><code>Camera</code>: the position of the camera. 
+                                            It can be fixed by deactivating <i><k>Fixed camera</k></i>, as indicated by the on-screen notations
+                                            <code>Camera: free</code> and <code>Camera: bound</code>
+                                        </li>
+                                        <li><code>Light source</code>: the position of the light source.
+                                            <ul>
+                                                <li>
+                                                    If <i><k>Lock light source</k></i> is activated, the light source is in a fixed position  
+                                                    independent of the camera's position,
+                                                </li>
+                                                <li>
+                                                    if <i><k>Lock light source</k></i> is not activated but the camera is fixed, the light 
+                                                    still remains in the same position
+                                                </li>
+                                                <li>
+                                                    only when both the camera and the light are free, their positions and directions coincide
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><code>Looking at</code>: the camera's viewpoint. When the camera is free
+                                            (<code>Camera: free</code>) it is fixed at <code>0.00 / 0.00 / 0.00</code> whereas it varies when 
+                                            the camera is locked
+                                        </li>
+                                        <li><code>Field of view</code>: the width of the viewing angle of the scene</li>
+                                        <li>
+                                            <code>Direction</code>: the direction of the camera. When a new file is loaded, the camera retains 
+                                            the previous direction.
+                                        </li>
+
+                                        <li><code>Render mode</code>: <code>solid</code> o <code>wireframe</code>. It can be changed 
+                                            using the specific button.</li>
+
+                                        <li><code>Shader</code>: provides information on the shader used. If a texture is applied to the model,
+                                            the name of it is indicated in the <code>texture</code> field.</li>
+
+                                        <li><code>fps</code>: measures the application's performance.</li>
+
+                                        <li><code>Model</code>: the name of the model (displayed only for IGES files or default models)</li>
+
+                                        <li><code>Surfaces</code>: indicates the number of surfaces and how many are visible out of the total</li>
+
+                                        <li><code>BBox</code> and <code>BBox Center</code>: indicate the coordinates and the center of the model's 
+                                            <i>bounding box</i> that can be seen by selecting <code>Render mode: wireframe</code></li>
+                                    </ul>
+                                </p>
+                                
+                            </li>
+                        </ul>
+                    </p> 
+
+                    <a href="images/app.no-icon.png" data-lightbox="mygallery">
+                        <img class="center" src="images/app.no-icon.png"alt="mrpotato">
+                    </a>
+                    <p class="tagline">
+                        Display of <b>Mrpotato</b> with <i>Debug</i> information
+                    </p>
+
+                    <div class="container-columns">
+                        <div class="column image-column">
+                            <a href="images/shader.png" data-lightbox="mygallery">
+                                <img src="images/shader.png" alt="shader">
+                            </a>
+                            <p class="tagline">
+                                Available Shaders
+                            </p>                           
+                        </div>
+                        <div class="column image-column">
+                            <a href="images/texture.png" data-lightbox="mygallery">
+                                <img src="images/texture.png" alt="texture">
+                            </a>
+                            <p class="tagline">
+                                Available Textures
+                            </p>                             
+                        </div>
+                        <div class="column text-column">
+                            <p>
+                                The application offers the possibility to view the model with
+                                <ul>
+                                    <li><ks>five shaders</ks>: diffuse, phong_per_vertex, phong _per_fragment, 
+                                    blinn_phong and toon</li>
+                                    <li><ks>four textures</ks>: bricks, wood, metal and uv</li>
+                                </ul>                       
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="container-columns">
+                        <div class="column image-column">
+                            <a href="images/levels of details.png" data-lightbox="mygallery">
+                                <img src="images/levels of details.png" alt="details">
+                            </a>
+                            <p class="tagline">
+                                <i>Level of details</i> and <i>Field of view</i>
+                            </p>                           
+                        </div>
+                        <div class="column text-column">
+                            <p>
+                                Additional parameters that can be interacted with are:
+                                <ul>
+                                    <li> 
+                                        <ks>field of view</ks>, to modify the viewing angle of the scene from a minimum of 
+                                        <b>30</b> degrees to a maximum of <b>120</b>
+                                    </li>
+                                    <li>
+                                        the <ks>level of detail</ks> of the model, in a range from <b>1</b> to <b>16</b>
+                                    </li>
+                                    
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="container-columns">
+                        <div class="column image-column">
+                            <a href="images/render mode.png" data-lightbox="mygallery">
+                                <img src="images/render mode.png" alt="render mode">
+                            </a>
+                            <p class="tagline">
+                                <i>Render mode</i> and <i>Color mode</i>
+                            </p>                           
+                        </div>
+                        <div class="column text-column">
+                            <p>
+                                Two different modes of <highlight><ks>RENDERING</ks></highlight> and 
+                                <highlight><ks>COLORING</ks></highlight> are available. For rendering:
+                                <ul>
+                                    <li><bc>SOLID</bc>, for the visualization of surfaces</li>
+                                    <li><bc>WIREFRAME</bc>, which also shows the model's <i>bounding box</i></li>
+                                </ul>
+                                The two coloring modes are:
+                                <ul>
+                                    <br>
+                                    <li><bc>MODEL</bc>, where all surfaces have a single color</li>
+                                    <li><bc>SURFACES</bc>, where each surface has a different color</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4>Tessellation and Level of Detail</h4>
+                        <p>
+                            <bc>Tessellation</bc> is the process of subdividing a continuous surface into a discrete number 
+                            of polygons, usually triangles. This process facilitates rendering and allows for 
+                            representing complex surfaces with a high degree of details.
+                        </p>
+                        <p>
+                            The <bc>level of detail (LOD)</bc> indicates the precision with which the surface is tessellated. 
+                            A higher level of detail results in a finer grid, representing the surface with greater quality but 
+                            also requiring higher rendering costs, while a lower level of detail uses a coarser grid, reducing 
+                            rendering costs at the expense of visual quality.
+                        </p>
+                    </div>
+                    <br>
+                    <h4>Visualization Examples</h4>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <a href="images/mrpotato-solid-lod1.png" data-lightbox="mygallery">
+                                <img src="images/mrpotato-solid-lod1.png" alt="mrpotato-solid-lod1">
+                            </a>                            
+                            <p class="tagline">
+                                Mrpotato <b>SOLID LOD=1</b> 
+                            </p>
+                        </div>
+                        <div class="gallery-item">
+                            <a href="images/mrpotato-wireframe-lod1.png" data-lightbox="mygallery">
+                                <img src="images/mrpotato-wireframe-lod1.png" alt="mrpotato-wireframe-lod1">
+                            </a>
+                            <p class="tagline">
+                                Mrpotato <b>WIREFRAME LOD=1</b> 
+                            </p>
+                        </div>
+                        <div class="gallery-item">
+                            <a href="images/mrpotato-solid-lod5.png" data-lightbox="mygallery">
+                                <img src="images/mrpotato-solid-lod5.png" alt="mrpotato-solid-lod5">
+                            </a>
+                            <p class="tagline">
+                                Mrpotato <b>SOLID LOD=5</b> 
+                            </p>
+                        </div>
+                        <div class="gallery-item">
+                            <a href="images/mrpotato-wireframe-lod5.png" data-lightbox="mygallery">
+                                <img src="images/mrpotato-wireframe-lod5.png" alt="mrpotato-wireframe-lod5">
+                            </a>
+                            <p class="tagline">
+                                Mrpotato <b>WIREFRAME LOD=5</b> 
+                            </p>
+                        </div>
+                        <div class="gallery-item">
+                            <a href="images/mrpotato-solid-lod10.png" data-lightbox="mygallery">
+                                <img src="images/mrpotato-solid-lod10.png" alt="mrpotato-solid-lod10">
+                            </a>
+                            <p class="tagline">
+                                Mrpotato <b>SOLID LOD=10</b> 
+                            </p>
+                        </div>
+                        <div class="gallery-item">
+                            <a href="images/mrpotato-wireframe-lod10.png" data-lightbox="mygallery">
+                                <img src="images/mrpotato-wireframe-lod10.png" alt="mrpotato-wireframe-lod10">
+                            </a>
+                            <p class="tagline">
+                                Mrpotato <b>WIREFRAME LOD=10</b> 
+                            </p>
+                        </div>
+                        <div class="gallery-item">
+                            <a href="images/mrpotato-solid-lod16.png" data-lightbox="mygallery">
+                                <img src="images/mrpotato-solid-lod16.png" alt="mrpotato-solid-lod16">
+                            </a>
+                            <p class="tagline">
+                                Mrpotato <b>SOLID LOD=16</b> 
+                            </p>
+                        </div>
+                        <div class="gallery-item">
+                            <a href="images/mrpotato-wireframe-lod16.png" data-lightbox="mygallery">
+                                <img src="images/mrpotato-wireframe-lod16.png" alt="mrpotato-wireframe-lod16">
+                            </a>
+                            <p class="tagline">
+                                Mrpotato <b>WIREFRAME LOD=16</b> 
+                            </p>
+                        </div>
+                    </div>
+                  
+                </p>
+            </div>
+
+
+            <br>
+            <div class="remark">
+                <!-- canvas -->
+                <p>
+                    <h3 id="canvas">3. Canvas</h3>
+                    <p>
+                        The 3D canvas allows for scene visualization and occupies the entire window, resizing <b>dynamically</b> 
+                        based on the screen size. It can be navigated using
+                        <ul>
+                            <li>
+                                the <ks>keyboard</ks> (with the shortcuts listed in the 
+                                <a href="#help-menu"><i>Help</i></a> menu)
+                            </li>
+                            <li>
+                                using the <ks>mouse</ks>: the mouse wheel allows you to zoom in or out (enlarging or 
+                                reducing the scene), and by holding it down, you can change the viewpoint by moving the mouse
+                            </li>
+                            <li>
+                                using <ks>touch</ks> devices
+                            </li>
+                        </ul>
+                    </p>
+                </p>
+            </div>
+            <br>
+            <div class="remark">
+                <!-- surfaces-list -->
+                <p>
+                    <h3 id="surfaces-list">4. Surfaces List</h3>
+                    <p>
+                        The list of surfaces that make up the scene occupies the right side of the window. 
+                        Like the tools bar, this list can also be shown or hidden:
+                        <ul>
+                            <li>if a 3D model is currently visualized in the canvas, using the <ks>E</ks> key on the keyboard</li>
+                            <li>by selecting the icon with three horizontal lines 
+                                <img class="inline" src="images/tools icon.png" alt="tools icon"></li>                         
+                        </ul>
+                        Changing the <i>Surfaces</i> view mode dynamically resizes the <ks>canvas</ks> to fit the screen.
+                    </p>
+                    <p>
+                        Each surface in the list can be hidden from view using the icon 
+                        <img class="inline" src="images/surfaces view icon.png" alt="tools icon"></li>, which toggles the 
+                        visibility of the surface. Additionally, there are two buttons:
+                        <ul>
+                            <li>
+                                <ks><highlight>Show others</highlight></ks>: hides the selected surface while the others remain visible
+                            </li>
+                            <li>
+                                <ks><highlight>Hide others</highlight></ks>: shows only the selected surface, hiding the others
+                            </li>
+                        </ul>
+                        <ks><i>Show all</i></ks> and <ks><i>Hide all</i></ks> work similarly, but on the entire list.
+                    </p>
+                </p>
+                
+            </div>
+            <br>
+        
+        </div>
+    </body>
+</html>
+                

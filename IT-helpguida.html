@@ -24,22 +24,20 @@
                 Il seguente documento si pone come guida utente per l'utilizzo dell'applicazione 
                 <a href="https://www.dm.unibo.it/~casciola/view-3dweb-app/#"><b>xcmodel 3D-WEB-App v2.0</b></a>.
                 <p>
-                    L'applicazione consente di <i>esaminare</i> modelli realizzati con il software <b>XCModel</b>, nei formati:    
-                    <ul>
-                        <li><ks>.igs</ks> (IGES)</li>
-                        <li><ks>.db</ks>, <ks>.dbe</ks> (XCModel)</li>
-                    </ul>
-                    Sia i modelli di default che quelli caricabili da file sono presenti e scaricabili dalla pagina del progetto
-                     XCModel: <a href="https://www.dm.unibo.it/~casciola/html/xcmodel.html">link   </a>
-
+                    L'applicazione consente di <i>esaminare</i> modelli realizzati con il software <b>XCModel</b>;  
+                    alcuni modelli sono liberamente scaricabili dalla pagina del progetto 
+                    <a href="https://www.dm.unibo.it/~casciola/html/xcmodel.html">XCModel</a>.
                 </p>
                 
             </div>
             <br>
             
-            <a href="images/app.png" data-lightbox="mygallery">
-                <img class="centered" src="images/app.png" alt="Mrpotato model">
-            </a>
+            <div class="image-container">
+                <a href="images/app.png" data-lightbox="mygallery">
+                    <img class="centered" src="images/app.png" alt="Mrpotato model">
+                </a>
+            </div>
+            
             
             <p class="tagline">
                 Nell'esempio, viene visualizzato il modello 
@@ -48,107 +46,7 @@
             </p>
 
             <br><br><br>
-            <h2>Come scaricare un modello</h2>
-            <p>
-                <a href="images/xcmodel-homepage.png" data-lightbox="mygallery">
-                    <img class="centered" src="images/xcmodel-homepage.png" alt="xcmodel-homepage">
-                </a>
-            </p>
-
-            <div class="remark"> 
-                <div class="container-columns">
-                    <div class="column image-column">
-                        <a href="images/mrpotato.png" data-lightbox="mygallery">
-                            <img src="images/mrpotato.png" alt="mrpotato">
-                        </a>
-                        
-                    </div>
-                    <div class="column text-column">
-                        <p>
-                            Andando nella sezione <bc>3D NURBS Models</bc> di <b>XCModel</b>, si ha la possibilità di scaricare
-                            diversi <ks>3D NURBS models produced with XCModel software</ks>, suddivisi in varie categorie:
-                            <ul class="four-column-list">
-                                <li>Aircraft</li>
-                                <li>Animal</li>
-                                <li>Bathroom</li>
-                                <li>Boat</li>
-                                <li>Character</li>
-                                <li>Furniture</li>
-                                <li>Kitchen</li>
-                                <li>Lamp</li>
-                                <li>Music</li>
-                                <li>Other</li>
-                                <li>Plants</li>
-                                <li>Vase</li>
-                                <li>Vehicle</li>        
-                            </ul>
-                        </p>
-                        <p>
-                            Nell'esempio, viene scaricato il modello <b>Mrpotato</b>, dalla categoria <i>Character</i>. 
-                            Per ogni modello, è visibile:
-                            <ul>
-                                <li>il numero di <b><i>superfici</i></b> che compone il modello (29)</li>
-                                <li>il numero di <b><i>superfici trimmed</i></b> (4)</li>
-                                <li>il numero totale di <b><i>control points</i></b> (951)</li>
-                            </ul>
-                        </p>
-                        <p>
-                            Selezionando <highlight><ks>Download IGES</ks></highlight>, viene scaricato il singolo file 
-                            <kc><i>Mrpotato.igs</i></kc>, mentre <highlight><ks>Download XCModel OBJ</ks></highlight> consente 
-                            di scaricare il file compresso <kc><i>Mrpotato.tgz</i></kc>.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="remark"> 
-                <div class="container-columns">
-                    <div class="column image-column">
-                        <a href="images/mrpotato-obj.png" data-lightbox="mygallery">
-                            <img src="images/mrpotato-obj.png" alt="file-list"> 
-                        </a>                       
-                        <p class="tagline">
-                            La cartella estratta contenente i file <b>.obj</b>, <b>.db</b> e <b>.dbe</b>
-                        </p>
-                    </div>
-                    <div class="column image-column">
-                        <a href="images/esempio-obj.png" data-lightbox="mygallery">
-                            <img src="images/esempio-obj.png" alt="file-list">
-                        </a>
-                        <p class="tagline">
-                            Estratto del file <b>Mrpotato.obj</b>
-                        </p>
-                    </div>
-                    <div class="column text-column">
-                        <p>
-                            All'interno della cartella estratta, è visibile un file <b>.obj</b>: il file è un documento testuale 
-                            che elenca i file <ks>.db</ks> e <ks>.dbe</ks> che rappresentano le superfici modellanti l'oggetto.
-                            <ul>
-                                <li>
-                                    Un file <highlight><ks>.db</ks></highlight> definisce una superficie <b>NURBS</b>
-                                </li>
-                                <li>
-                                    Un file <highlight><ks>.dbe</ks></highlight> definisce una superficie <b>NURBS</b> 
-                                    <i>trimmed</i> con la definizione di una regione del dominio parametrico.
-                                </li>
-                            </ul>
-                            Un file <ks>.dbe</ks> rappresenta quindi un'estensione rispetto a <ks>.db</ks>. Inoltre
-                            <ul>
-                                <li>
-                                    il software <b>XCModel</b> consente la gestione di superfici NURBS <i>trimmed</i> generiche: 
-                                    la regione del dominio parametrico può essere definita da curve 2D NURBS generiche, mentre
-                                </li>
-                                <li>
-                                    l'applicazione web è in grado di caricare e visualizzare correttamente solo file <ks>.dbe</ks> 
-                                    in cui la regione del dominio parametrico è definita da segmenti retti in corrispondenza della 
-                                    partizione nodale della superficie NURBS. 
-
-                                </li>
-                            </ul>
-                        </p>
-                    </div>
-                </div>
-            </div>
+            
 
             <!-- INTRODUCTION -->
             <h2>Interfaccia grafica</h2>
@@ -163,14 +61,14 @@
                     </ol>
                 </p>
             </div>
-              
+            <br>
             <div class="remark">
                 <!-- menu bar -->
                 <p>
-                    <h3 id="menu-bar">Barra dei menù</h3>
+                    <h3 id="menu-bar">1. Barra dei menù</h3>
                     <p>
                         Componente fisso dell'interfaccia, occupa la parte superiore sinistra della finestra. 
-                        Offre due menù, <em>File</em> e <em>Help</em>: 
+                        Offre tre menù, <em>File</em>, <em>Help</em> e <em>Guide</em>: 
                     </p>
                     <a href="images/menu.png" data-lightbox="mygallery">
                         <img class="small_image" src="images/menu.png" alt="menu bar">
@@ -214,7 +112,108 @@
                             </div>
                         </div>
                     
-                    <h4 id="help-menu">Help</h4>
+                        <!-- come scaricare un modello -->
+                        <h5>Come scaricare un modello</h5>
+                        <p>
+                            <a href="images/xcmodel-homepage.png" data-lightbox="mygallery">
+                                <img class="centered" src="images/xcmodel-homepage.png" alt="xcmodel-homepage">
+                            </a>
+                        </p>
+
+                        
+                        <div class="container-columns">
+                            <div class="column image-column">
+                                <a href="images/mrpotato.png" data-lightbox="mygallery">
+                                    <img src="images/mrpotato.png" alt="mrpotato">
+                                </a>
+                                
+                            </div>
+                            <div class="column text-column">
+                                <p>
+                                    Andando nella sezione <bc>3D NURBS Models</bc> di <b>XCModel</b>, si ha la possibilità di scaricare
+                                    diversi <ks>3D NURBS models produced with XCModel software</ks>, suddivisi in varie categorie:
+                                    <ul class="four-column-list">
+                                        <li>Aircraft</li>
+                                        <li>Animal</li>
+                                        <li>Bathroom</li>
+                                        <li>Boat</li>
+                                        <li>Character</li>
+                                        <li>Furniture</li>
+                                        <li>Kitchen</li>
+                                        <li>Lamp</li>
+                                        <li>Music</li>
+                                        <li>Other</li>
+                                        <li>Plants</li>
+                                        <li>Vase</li>
+                                        <li>Vehicle</li>        
+                                    </ul>
+                                </p>
+                                <p>
+                                    Nell'esempio, viene scaricato il modello <b>Mrpotato</b>, dalla categoria <i>Character</i>. 
+                                    Per ogni modello, è visibile:
+                                    <ul>
+                                        <li>il numero di <b><i>superfici</i></b> che compone il modello (29)</li>
+                                        <li>il numero di <b><i>superfici trimmed</i></b> (4)</li>
+                                        <li>il numero totale di <b><i>control points</i></b> (951)</li>
+                                    </ul>
+                                </p>
+                                <p>
+                                    Selezionando <highlight><ks>Download IGES</ks></highlight>, viene scaricato il singolo file 
+                                    <kc><i>Mrpotato.igs</i></kc>, mentre <highlight><ks>Download XCModel OBJ</ks></highlight> consente 
+                                    di scaricare il file compresso <kc><i>Mrpotato.tgz</i></kc>.
+                                </p>
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="container-columns">
+                            <div class="column image-column">
+                                <a href="images/mrpotato-obj.png" data-lightbox="mygallery">
+                                    <img src="images/mrpotato-obj.png" alt="file-list"> 
+                                </a>                       
+                                <p class="tagline">
+                                    La cartella estratta contenente i file <b>.obj</b>, <b>.db</b> e <b>.dbe</b>
+                                </p>
+                            </div>
+                            <div class="column image-column">
+                                <a href="images/esempio-obj.png" data-lightbox="mygallery">
+                                    <img src="images/esempio-obj.png" alt="file-list">
+                                </a>
+                                <p class="tagline">
+                                    Estratto del file <b>Mrpotato.obj</b>
+                                </p>
+                            </div>
+                            <div class="column text-column">
+                                <p>
+                                    All'interno della cartella estratta, è visibile un file <b>.obj</b>: il file è un documento testuale 
+                                    che elenca i file <ks>.db</ks> e <ks>.dbe</ks> che rappresentano le superfici modellanti l'oggetto.
+                                    <ul>
+                                        <li>
+                                            Un file <highlight><ks>.db</ks></highlight> definisce una superficie <b>NURBS</b>
+                                        </li>
+                                        <li>
+                                            Un file <highlight><ks>.dbe</ks></highlight> definisce una superficie <b>NURBS</b> 
+                                            <i>trimmed</i> con la definizione di una regione del dominio parametrico.
+                                        </li>
+                                    </ul>
+                                    Un file <ks>.dbe</ks> rappresenta quindi un'estensione rispetto a <ks>.db</ks>. Inoltre
+                                    <ul>
+                                        <li>
+                                            il software <b>XCModel</b> consente la gestione di superfici NURBS <i>trimmed</i> generiche: 
+                                            la regione del dominio parametrico può essere definita da curve 2D NURBS generiche, mentre
+                                        </li>
+                                        <li>
+                                            l'applicazione web è in grado di caricare e visualizzare correttamente solo file <ks>.dbe</ks> 
+                                            in cui la regione del dominio parametrico è definita da segmenti retti in corrispondenza della 
+                                            partizione nodale della superficie NURBS. 
+
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+            
+
+                    <h4>Help</h4>
                     <p>
                         Il menù di <b>Help</b> apre una finestra a schermo che elenca i tasti rapidi da tastiera
                         per eseguire le funzioni.
@@ -222,13 +221,20 @@
                     <a href="images/help menu.png" data-lightbox="mygallery">
                         <img class="center" src="images/help menu.png" alt="help">
                     </a>
+                    <br>
+
+                    <h4>Guide</h4>
+                    <p>
+                        Il pulsante <b>Guide</b> consente di aprire la presente guida.
+                    </p>
+
                 </p>
             </div>
-
+            <br>
             <div class="remark">
                 <!-- tools bar -->
                 <p>
-                    <h3 id="tools-bar">Barra degli strumenti</h3>
+                    <h3 id="tools-bar">2. Barra degli strumenti</h3>
 
                     <div class="container-columns">
                         <div class="column image-column">
@@ -357,9 +363,9 @@
                             <p>
                                 L'applicazione offre anche la possibilità di visualizzare il modello con
                                 <ul>
-                                    <li><ks>cinque shader</ks>: diffue, phong_per_vertex, phong _per_fragment, 
+                                    <li><ks>cinque shaders</ks>: diffuse, phong_per_vertex, phong _per_fragment, 
                                     blinn_phong e toon</li>
-                                    <li><ks>quattro texture</ks>: bricks, wood, metal e uv</li>
+                                    <li><ks>quattro textures</ks>: bricks, wood, metal e uv</li>
                                 </ul>                       
                             </p>
                         </div>
@@ -432,6 +438,7 @@
                             più basso utilizza una griglia meno fine, riducendo il costo di rendering a scapito della qualità visiva.
                         </p>
                     </div>
+                    <br>
                     <h4>Esempi di Visualizzazione</h4>
                     <div class="gallery">
                         <div class="gallery-item">
@@ -504,11 +511,11 @@
             </div>
 
 
-
+            <br>
             <div class="remark">
                 <!-- canvas -->
                 <p>
-                    <h3 id="canvas">Canvas</h3>
+                    <h3 id="canvas">3. Canvas</h3>
                     <p>
                         Il canvas 3D consente la visualizzazione della scena e occupa l'intera finestra, 
                         ridimensionandosi <b>dinamicamente</b> in base alle dimensioni dello schermo. 
@@ -530,11 +537,11 @@
                     </p>
                 </p>
             </div>
-
+            <br>
             <div class="remark">
                 <!-- surfaces-list -->
                 <p>
-                    <h3 id="surfaces-list">Lista delle superfici</h3>
+                    <h3 id="surfaces-list">4. Lista delle superfici</h3>
                     <p>
                         La lista delle superfici che costituiscono la scena occupa la parte destra della finestra. Come per 
                         la barra degli strumenti, anche questa può essere visualizzata o nascosta:
